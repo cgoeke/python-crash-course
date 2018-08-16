@@ -8,8 +8,6 @@ def make_great(list):
     """Adds 'The Great' to each magicians name."""
     for i in range(len(magicians)):
         magicians[i] = 'The Great ' + magicians[i]
-    print(len(magicians))
-
 
 def show_magicians(list):
     """Prints magician names."""
