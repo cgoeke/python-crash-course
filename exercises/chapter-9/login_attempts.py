@@ -1,0 +1,47 @@
+# 9-5. Login Attempts: Add an attribute called login_attempts to your User
+# class from Exercise 9-3 (page 166). Write a method called increment_
+# login_attempts() that increments the value of login_attempts by 1. Write
+# another method called reset_login_attempts() that resets the value of login_
+# attempts to 0.
+# Make an instance of the User class and call increment_login_attempts()
+# several times. Print the value of login_attempts to make sure it was incremented
+# properly, and then call reset_login_attempts(). Print login_attempts again to
+# make sure it was reset to 0.
+class User():
+    """Defines a User class."""
+    def __init__(self, first_name, last_name, user_name):
+        """Initialize the user."""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.user_name = user_name
+        self.login_attempts = 0
+
+    def increment_login_attempts(self):
+        """Increments amount of login attempts by 1."""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """Resets login attempts back to 0."""
+        self.login_attempts = 0
+
+    def describe_user(self):
+        """Prints summary of the user profile."""
+        print(self.user_name + "'s profile:")
+        print(" First Name: " + self.first_name)
+        print(" Last Name: " + self.last_name)
+
+    def greet_user(self):
+        """Prints a personalized greeting to the user."""
+        print("\nHello " + self.user_name + "!")
+
+christian = User("Christian", "Goeke", "cgoeke")
+print(christian.login_attempts)
+
+christian.increment_login_attempts()
+print(christian.login_attempts)
+
+christian.increment_login_attempts()
+print(christian.login_attempts)
+
+christian.reset_login_attempts()
+print(christian.login_attempts)
