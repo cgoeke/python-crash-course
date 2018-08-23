@@ -7,7 +7,11 @@
 # Write a method called test_city_country() to verify that calling your function
 # with values such as 'santiago' and 'chile' results in the correct string. Run
 # test_cities.py, and make sure test_city_country() passes.
-def city_country(city, country):
+def city_country(city, country, population=0):
     """Formats a string given a city and a country."""
-    formatted_city_country = city.title() + ", " + country.title()
+    if population:
+        formatted_city_country = city.title() + ", " + country.title() + " - "
+        formatted_city_country += "population " + str(population)
+    else:
+        formatted_city_country = city.title() + ", " + country.title()
     return formatted_city_country               

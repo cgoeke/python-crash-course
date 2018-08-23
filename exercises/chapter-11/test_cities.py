@@ -13,9 +13,14 @@ from city_functions import city_country
 class CityCountryTest(unittest.TestCase):
     """Tests for city_functions.py"""
     def test_city_country(self):
-        """Does names like Tokyo, Japan work?"""
+        """Do names like Tokyo, Japan work?"""
         city_country_test_name = city_country('tokyo', 'japan')
         self.assertEqual(city_country_test_name, 'Tokyo, Japan')
+
+    def test_city_country_population(self):
+        """Do names with population work?"""
+        population_test_name = city_country('tokyo', 'japan', 9273000)
+        self.assertEqual(population_test_name, 'Tokyo, Japan - population 9273000')
 
 
 unittest.main()
