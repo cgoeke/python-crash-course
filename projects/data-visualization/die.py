@@ -4,7 +4,7 @@ class Die():
     """A class representing a single die."""
     def __init__(self, num_sides=6):
         """Initialize a default six-sided die."""
-        self.num_sides =num_sides
+        self.num_sides = num_sides
 
     def roll(self):
         """Return a random value between 1 and num_sides."""
